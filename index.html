@@ -480,7 +480,7 @@ sub.style.cssText='color:#64748b;font-size:12px;margin-bottom:20px;font-family:s
         <button id="lang-en" class="active" onclick="setLang('en')">EN</button>
         <button id="lang-zh" onclick="setLang('zh')">中文</button>
       </div>
-      <div class="date-badge"><span data-i18n="updated">Updated</span>: 09 Sep 2026</div>
+      <div class="date-badge"><span data-i18n="updated">Updated</span>: 10 Sep 2026</div>
       <div class="live-dot">Compiled</div>
     </div>
   </div>
@@ -1707,7 +1707,7 @@ sub.style.cssText='color:#64748b;font-size:12px;margin-bottom:20px;font-family:s
     </div>
 </div>
 
-<footer>PDO Riyah 1 &amp; 2 Wind IPP Project &nbsp;·&nbsp; Document Dashboard &nbsp;·&nbsp; Updated 09 Sep 2026 &nbsp;·&nbsp; Developed By Shaguf Ahmed</footer>
+<footer>PDO Riyah 1 &amp; 2 Wind IPP Project &nbsp;·&nbsp; Document Dashboard &nbsp;·&nbsp; Updated 10 Sep 2026 &nbsp;·&nbsp; Developed By Shaguf Ahmed</footer>
 
 <script>
 // TABS
@@ -1871,8 +1871,7 @@ function sliceMDL(site, group, btn) {
   document.getElementById(site+'_k_awc').textContent   = d.awc;
   document.getElementById(site+'_k_rwc').textContent   = d.rwc;
   document.getElementById(site+'_k_rej').textContent   = d.rej;
-  document.getElementById(site+'_k_crs').textContent   = d.crs;
-  document.getElementById(site+'_k_ur').textContent    = d.ur;
+  document.getElementById(site+'_k_crs').textContent   = d.crs + d.ur;  // combined CRS+UR card
   document.getElementById(site+'_k_ifi').textContent   = d.ifi;
   const rate = d.total > 0 ? Math.round(d.app/d.total*1000)/10 : 0;
   document.getElementById(site+'_k_appr').textContent  = rate + '% rate';
